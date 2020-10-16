@@ -1,3 +1,4 @@
+import { requireAuth } from 'src/lib/auth'
 import { db } from 'src/lib/db'
 
 const foreignKeyReplacement = (input) => {
@@ -25,12 +26,14 @@ export const user = ({ id }) => {
 }
 
 export const createUser = ({ input }) => {
+  requireAuth()
   return db.user.create({
     data: foreignKeyReplacement(input),
   })
 }
 
 export const updateUser = ({ id, input }) => {
+  requireAuth()
   return db.user.update({
     data: foreignKeyReplacement(input),
     where: { id },
@@ -38,6 +41,7 @@ export const updateUser = ({ id, input }) => {
 }
 
 export const deleteUser = ({ id }) => {
+  requireAuth()
   return db.user.delete({
     where: { id },
   })
