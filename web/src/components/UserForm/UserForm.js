@@ -35,6 +35,7 @@ const UserForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
+          disabled={props.user?.email}
         />
         <FieldError name="email" className="rw-field-error" />
 
@@ -51,6 +52,7 @@ const UserForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
+          disabled={props.user?.name}
         />
         <FieldError name="name" className="rw-field-error" />
 

@@ -1,10 +1,10 @@
 import { Link, routes } from '@redwoodjs/router'
 import { Flash } from '@redwoodjs/web'
-import DefaultLayout from "src/layouts/DefaultLayout/DefaultLayout";
+import LayoutDefault from "src/layouts/LayoutDefault/LayoutDefault";
 
 const PostsLayout = (props) => {
   return (
-    <DefaultLayout>
+    <LayoutDefault>
       <Flash timeout={1000} />
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
@@ -17,7 +17,7 @@ const PostsLayout = (props) => {
         </Link>
       </header>
       <main className="rw-main">{props.children}</main>
-    </DefaultLayout>
+    </LayoutDefault>
   )
 }
 

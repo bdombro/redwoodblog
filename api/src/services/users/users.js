@@ -25,6 +25,12 @@ export const user = ({ id }) => {
   })
 }
 
+export const userByEmail = ({ email }) => {
+  return db.user.findOne({
+    where: { email },
+  })
+}
+
 export const createUser = ({ input }) => {
   requireAuth()
   return db.user.create({

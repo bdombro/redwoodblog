@@ -1,9 +1,9 @@
 import {Flash} from '@redwoodjs/web'
-import DefaultLayout from "src/layouts/DefaultLayout/DefaultLayout";
+import LayoutDefault from "src/layouts/LayoutDefault/LayoutDefault";
 
 const PagesLayout = (props) => {
   return (
-    <DefaultLayout>
+    <LayoutDefault>
       <Flash timeout={1000}/>
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
@@ -11,7 +11,7 @@ const PagesLayout = (props) => {
         </h1>
       </header>
       <main className="rw-main">{props.children}</main>
-    </DefaultLayout>
+    </LayoutDefault>
   )
 }
 
