@@ -2,7 +2,7 @@ datasource DS {
   // optionally set multiple providers
   // example: provider = ["sqlite", "postgresql"]
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -18,14 +18,14 @@ model User {
   createdAt DateTime @default(now())
   email String  @unique
   name  String?
-  posts   Post[]
+//  posts   Post[]
 }
 
-model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  author     User        @relation(fields: [authorId], references: [id])
-  authorId   Int         // relation scalar field  (used in the `@relation` attribute above)
-  title     String
-  body      String
-}
+//model Post {
+//  id        Int      @id @default(autoincrement())
+//  createdAt DateTime @default(now())
+//  author     User        @relation(fields: [authorId], references: [id])
+//  authorId   Int         // relation scalar field  (used in the `@relation` attribute above)
+//  title     String
+//  body      String
+//}

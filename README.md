@@ -21,4 +21,18 @@ yarn install
 yarn redwood dev
 ```
 
-Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/.redwood/functions/*`. 
+Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/.redwood/functions/*`.
+
+# Quick Reference
+
+```terminal
+yarn rw g page home /
+yarn rw g page about /about
+yarn rw g layout default
+yarn rw db studio
+yarn rw db save
+yarn rw db up
+yarn rw g scaffold post
+yarn rw d scaffold post
+```
+
